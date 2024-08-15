@@ -1,0 +1,13 @@
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        vector<int>v2;
+        for(auto i =nums.begin();i<nums.end();i++){
+            if(binary_search((i+1),nums.end(),*i)==false){
+                v2.push_back(*i);
+            }
+        } 
+        nums=v2;
+        return nums.size();       
+    }
+};
